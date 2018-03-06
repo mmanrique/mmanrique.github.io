@@ -218,11 +218,11 @@ navbar :
   tags :
     enabled : true
   github_projects :
-    enabled : false
+    enabled : true
   social_links :
-    enabled : false
+    enabled : true
   external_links :
-    enabled : false
+    enabled : true
 
 
 # The social links are links to various social networking sites. Although
