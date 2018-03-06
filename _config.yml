@@ -173,7 +173,7 @@ sections:
     content :
       enabled : true
     social_links :
-      enabled : true
+      enabled : false
     github_projects :
       enabled : false
   social_links :
@@ -181,7 +181,7 @@ sections:
   github_projects :
     enabled : false
   external_links :
-    enabled : true
+    enabled : false
   archive :
     enabled : false
   categories :
@@ -364,7 +364,7 @@ github_projects :
 #       name : Lowcountry Blues Club
 #       url : http://lowcountrybluesclub.blogspot.com
 external_links :
-  header :
+  header : External Links
   links :
     - link :
       name : The Dereck
