@@ -179,15 +179,15 @@ sections:
   social_links :
     enabled : true
   github_projects :
-    enabled : false
+    enabled : true
   external_links :
-    enabled : false
+    enabled : true
   archive :
-    enabled : false
+    enabled : true
   categories :
-    enabled : false
+    enabled : true
   tags :
-    enabled : false
+    enabled : true
 
 
 # The navbar settings determine what menus are displayed on the navbar at the

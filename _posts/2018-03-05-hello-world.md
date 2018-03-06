@@ -1,6 +1,11 @@
 ---
 layout : post
 title : Hello, world from 2018
+category : Status Update  
+tags :  
+  - Bootstrap  
+  - Jekyll 
+  - Hello
 ---
 
 El dia de ma&#241;ana cumplo un a&#241;o desde que empeze en Amazon.
