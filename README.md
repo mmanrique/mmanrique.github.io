@@ -1,6 +1,5 @@
 # gh-pages-blog #
 =============
-Test
 
 The simple way to use GitHub Pages as your account or project blog and website.
 
