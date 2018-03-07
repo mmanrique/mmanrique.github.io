@@ -1,8 +1,6 @@
 ---
 layout : post
-title : Hello, world from 2018
-subtitle: Hi there
-category : Status Update  
+title : Hello, world from 2018  
 tags :  
   - Bootstrap  
   - Jekyll 
