@@ -25,7 +25,7 @@
 # author : Dereck Curry
 name : Manuel's Blog
 brand : Manuel's Blog
-description : 
+description : Personal Blog
 url : https://mmanrique.github.io
 email : manuel.manrique.oporto@gmail.com
 author: Manuel Manrique
@@ -168,14 +168,16 @@ sections:
   brief_bio :
     enabled : true
     image :
-      enabled : false
-      url : false
+      enabled : true
+      url : https://avatars1.githubusercontent.com/u/1497942?v=4.png
+    holder :
+      enabled: false
     content :
       enabled : true
     social_links :
-      enabled : false
+      enabled : true
     github_projects :
-      enabled : false
+      enabled : true
   social_links :
     enabled : true
   github_projects :
@@ -339,6 +341,9 @@ github_projects :
   - project :
     name : gh-pages-blog
     url : https://github.com/thedereck/gh-pages-blog
+  - project :
+    name : gh-pages-blog2
+    url : https://github.com/thedereck/gh-pages-blog
 
 
 # These are links to other websites outside of the blog that are not part of
@@ -424,10 +429,15 @@ bootstrap:
 # Here's an example configuration:
 # jquery:
 #   enabled : true
-#   src : jquery-1.9.1.min.js
+#   src : jquery-3.3.1.min.js
 jquery:
   enabled : true
-  src : jquery-1.9.1.min.js
+  src : jquery-3.3.1.min.js
+
+
+popper:
+  enabled: true
+  src: popper.min.js
 
 
 # Font Awesome includes many different fonts that are used throughout the
@@ -575,3 +585,6 @@ analytics :
   google_analytics :
     enabled : false
     tracking_id : UA-1234567
+
+plugins:
+  - jekyll-paginate

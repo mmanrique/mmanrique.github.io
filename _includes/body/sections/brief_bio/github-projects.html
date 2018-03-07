@@ -9,13 +9,11 @@
 		{% endfor %}
 
 		{% if brief_bio_enabled_github_project %}
-			<br>
 			<p class="text-center"><small><strong>{{ site.github_projects.header | upcase }}</strong></small></p>
-
 			<div class="text-center">
-				<div class="btn-group btn-group-vertical">
+				<div class="btn-group-vertical">
 					{% for brief_bio_github_project in site.github_projects.projects %}
-						<a class="btn" href="{{ brief_bio_github_project.url }}" target="_blank">
+						<a class="btn btn-secondary" href="{{ brief_bio_github_project.url }}" target="_blank">
 							{% if site.font_awesome.enabled %}
 								<i class="icon-github"></i> 
 							{% endif %}

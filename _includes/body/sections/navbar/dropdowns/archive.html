@@ -1,16 +1,15 @@
 {% if site.navbar.archive.enabled and site.posts.size > 0 %}
 	{% assign navbar_archive_html = null %}
 	{% capture navbar_archive_html %}
-		<ul class="nav pull-left">
-			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			<li class="nav-item dropdown">
+				<a href="#" class="nav-link dropdown-toggle" id="navbarArchiveMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					{% if site.font_awesome.enabled %}
 						<i class="icon-calendar"></i> 
 					{% endif %}
 					Archive 
 					<b class="caret"></b>
 				</a>
-				<ul class="dropdown-menu">
+				<ul class="dropdown-menu" aria-labelledby="navbarArchiveMenuLink">
 					{% assign navbar_archive_first_year = true %}
 					{% assign navbar_archive_prev_year = '' %}
 					{% for navbar_archive_p in site.posts %}
@@ -27,8 +26,8 @@
 							</li>
 							{% endif %}
 							{% assign navbar_archive_prev_year = navbar_archive_year %}
-							<li class="dropdown-submenu">
-								<a tabindex="-1" href="#">
+							<li>
+								<a class="dropdown-item dropdown-toggle">
 									{% if site.font_awesome.enabled %}
 										<i class="icon-calendar"></i> 
 									{% endif %}
@@ -37,7 +36,7 @@
 								<ul class="dropdown-menu">
 						{% endif %}
 						<li>
-							<a href="{{ site.url }}{{ navbar_archive_p.url }}">
+							<a href="{{ site.url }}{{ navbar_archive_p.url }}" class="dropdown-item">
 								{% if site.font_awesome.enabled %}
 									<i class="icon-pencil"></i> 
 								{% endif %}
@@ -49,7 +48,6 @@
 					</ul>
 				</ul>
 			</li>
-		</ul>
 	{% endcapture %}
 	{{ navbar_archive_html | strip_newlines | remove:'	' }}
 {% endif %}

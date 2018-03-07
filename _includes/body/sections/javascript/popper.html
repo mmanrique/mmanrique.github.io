@@ -1,0 +1,7 @@
+{% assign javascript_popper_html = null %}
+{% capture javascript_popper_html %}
+  {% if site.popper.enabled %}
+    <script src="{{ site.url }}/js/{{ site.popper.src }}"></script>
+  {% endif %}
+{% endcapture %}
+{{ javascript_popper_html | strip_newlines | remove:'	' }}

@@ -1,9 +1,10 @@
 {% if site.sections.github_projects.enabled and site.github_projects.projects.size > 0 %}
 	{% assign section_github_projects_html = null %}
 	{% capture section_github_projects_html %}
-		<div class="well ghpb-well-navlist">
-			<ul class="nav nav-list ghpb-nav-list">
-				<li class="nav-header ghpb-nav-header">
+		<div class="card bg-light mb-3">
+			<div class="card-body py-2">
+			<ul class="list-inline m-0">
+				<li class="text-muted card-subtitle">
 					{% if site.font_awesome.enabled %}
 						<i class="icon-github-alt"></i> 
 					{% endif %}
@@ -20,6 +21,7 @@
 					</li>
 				{% endfor %}
 			</ul>
+			</div>
 		</div>
 	{% endcapture %}
 	{{ section_github_projects_html | strip_newlines | remove:'	' }}

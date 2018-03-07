@@ -23,7 +23,7 @@
 		{% endcapture %}
 	{% endif %}
 
-	<div class="page-header">
+	<div class="page-header mt-2 mb-3" >
 		{% if page.title %}
 			<h1>{{ page.title }}</h1>
 		{% elsif site.description %}
@@ -34,9 +34,9 @@
 			<h4>{{ page.subtitle }}</h4>
 		{% endif %}
 
-		<div class="row">
-			<small>
-				<div class="span3 offset1">
+		<div>
+			<small class="w-100 row">
+				<div class="col-md-5 offset-md-1">
 					{% if site.font_awesome.enabled %}
 						<i class="icon-user"></i> 
 					{% endif %}
@@ -55,7 +55,7 @@
 					<br>
 				</div>
 
-				<div class="span3">
+				<div class="col-md-5">
 					{% if page.category.size > 0 %}
 						{% if site.font_awesome.enabled %}
 							<i class="icon-folder-open"></i> 
@@ -90,7 +90,7 @@
 						<br>
 					{% endif %}
 				</div>
-				<div class="span1"></div>
+				<div class="col-md-1"></div>
 			</small>
 		</div>
 	</div>

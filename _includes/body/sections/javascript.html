@@ -1,8 +1,11 @@
 {% assign section_github_projects_html = null %}
 {% capture section_github_projects_html %}
 	{% include body/sections/javascript/jquery.html %}
+	{% include body/sections/javascript/popper.html %}
 	{% include body/sections/javascript/bootstrap.html %}
 	{% include body/sections/javascript/google-analytics.html %}
 	{% include body/sections/javascript/disqus.html %}
+	<script src="{{ site.url }}/js/bootstrap-4-navbar.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.js"></script>
 {% endcapture %}
 {{ section_github_projects_html | strip_newlines | remove:'	' }}

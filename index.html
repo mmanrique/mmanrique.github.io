@@ -6,8 +6,8 @@ exclude: true
 {% assign index_page_html = null %}
 {% capture index_page_html %}
 	{% for p in paginator.posts %}
-		<div class="ghpb-post">
-			<div class="well ghpb-well-outline">
+		<div class="card ghpb-post bg-light ">
+			<div class="card-body ghpb-well-outline">
 				{% if p.title %}
 					<h2><a href="{{ site.url }}{{ p.url }}">{{ p.title }}</a></h2>
 				{% else %}
@@ -36,9 +36,9 @@ exclude: true
 				{{ p.content }}
 
 				<br>
-				<div class="row">
-					<small>
-						<div class="span3 offset1">
+				<div>
+					<small class="w-100 row justify-content-center">
+						<div class="col-md-5 offset-md-1">
 							{% if site.font_awesome.enabled %}
 								<i class="icon-user"></i> 
 							{% endif %}
@@ -74,7 +74,7 @@ exclude: true
 							{% endif %}
 						</div>
 
-						<div class="span3">
+						<div class="col-md-5">
 							{% if p.category.size > 0 %}
 								{% if site.font_awesome.enabled %}
 									<i class="icon-folder-open"></i> 
@@ -130,9 +130,8 @@ exclude: true
 		<br>
 	{% endfor %}
 
-	<div class="pagination">
-		<div class="row">
-			<div class="span2 offset1">
+	<div class="pagination row justify-content-center">
+			<div class="col-md-2 offset-md-1">
 				{% if paginator.previous_page %}
 					{% if paginator.previous_page == 1 %}
 						<a href="{{ site.url }}" class="previous">Previous</a>
@@ -142,16 +141,15 @@ exclude: true
 				{% endif %}
 			</div>
 
-			<div class="span2">
+			<div class="col-md-3 text-center">
 				<span class="page_number">Page: {{paginator.page}} of {{paginator.total_pages}}</span>
 			</div>
 
-			<div class="span2">
+			<div class="col-md-2">
 				{% if paginator.next_page %}
 					<a href="{{ site.url }}/page{{paginator.next_page}}" class="next">Next</a>
 				{% endif %}
 			</div>
-		</div>
 	</div>
 
 {% endcapture %}

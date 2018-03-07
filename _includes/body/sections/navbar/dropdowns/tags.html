@@ -19,16 +19,15 @@
 			{{ navbar_sorted_tag_names | number_of_words }}
 		{% endcapture %}
 
-		<ul class="nav pull-left">
 			<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+				<a href="#" class="nav-link dropdown-toggle" id="navbarTagsMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					{% if site.font_awesome.enabled %}
 						<i class="icon-tags"></i> 
 					{% endif %}
 					Tags 
 					<b class="caret"></b>
 				</a>
-				<ul class="dropdown-menu">
+				<ul class="dropdown-menu" aria-labelledby="navbarTagsMenuLink">
 					{% assign navbar_prev_tag = '' %}
 					{% for navbar_tag_i in (1..navbar_number_of_tags) %}
 
@@ -37,8 +36,8 @@
 
 						{% if navbar_prev_tag != navbar_tag %}
 							{% assign navbar_prev_tag = navbar_tag %}
-							<li class="dropdown-submenu">
-								<a tabindex="-1" href="#">
+							<li>
+								<a class="dropdown-item dropdown-toggle">
 									{% if site.font_awesome.enabled %}
 										<i class="icon-tag"></i> 
 									{% endif %}
@@ -56,7 +55,7 @@
 												{% if navbar_tags_p_match == false %}
 													{% assign navbar_tags_p_match = true %}
 													<li>
-														<a href="{{ site.url }}{{ navbar_tags_p.url }}">
+														<a href="{{ site.url }}{{ navbar_tags_p.url }}" class="dropdown-item">
 															{% if site.font_awesome.enabled %}
 																<i class="icon-pencil"></i> 
 															{% endif %}
@@ -74,7 +73,6 @@
 					{% endfor %}
 				</ul>
 			</li>
-		</ul>
 	{% endcapture %}
 	{{ navbar_dropdown_tags_html | strip_newlines | remove:'	' }}
 {% endif %}

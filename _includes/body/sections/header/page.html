@@ -1,7 +1,7 @@
 {% if page.title or page.subtitle or site.description %}
 	{% assign header_page_html = null %}
 	{% capture header_page_html %}
-		<div class="page-header">
+		<div class="page-header border-bottom">
 			{% if page.title %}
 				<h1>{{ page.title }}</h1>
 			{% elsif site.description %}

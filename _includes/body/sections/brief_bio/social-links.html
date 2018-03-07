@@ -11,18 +11,17 @@
 		{% endfor %}
 
 		{% if brief_bio_enabled_social_link %}
-			<br>
 			{% if site.social_links.follow_name %}
 				<p class="text-center"><small><strong>FOLLOW {{ site.social_links.follow_name | upcase }}</strong></small></p>
 			{% else %}
 				<p class="text-center"><small><strong>FOLLOW ME</strong></small></p>
 			{% endif %}
 
-			<ul class="inline text-center">
+			<ul class="text-center list-inline">
 				{% for brief_bio_social_link in site.social_links.links %}
 					{% if brief_bio_social_link.enabled %}
-						<li>
-							<a class="btn" href="{{ brief_bio_social_link.url }}" target="_blank">
+						<li class="list-inline-item">
+							<a class="btn btn-secondary" href="{{ brief_bio_social_link.url }}" target="_blank">
 								{% if site.font_awesome.enabled and brief_bio_social_link.font_awesome_icon %}
 									<i class="{{ brief_bio_social_link.font_awesome_icon }}"></i>
 								{% else %}
