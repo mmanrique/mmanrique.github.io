@@ -33,7 +33,10 @@ exclude: true
 				{% endif %}
 
 				<br>
-				{{ p.content }}
+				{{ p.content | split:'<!--split-->' | first }}
+				{% if p.content contains '<!--split-->'% %}
+					...
+				{% endif %}
 
 				<br>
 				<div>
