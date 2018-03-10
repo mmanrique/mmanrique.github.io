@@ -385,34 +385,15 @@ external_links :
 # should work just fine, but you may need to tweak the css settings in the
 # css/gh-pages-blog.css if things clash.
 #
-# responsive : enabled - To enable a responsive Bootstrap, set this value to
-# true.
-#
-# responsive : css - The name of the Bootstrap responsive css file to use. It
-# should be just fine to use the min file.
-#
-# responsive : js : enabled - This either enables or disables the responsive
-# Bootstrap css. If you're going to use responsive css, you also need to use
-# a responsive Bootstrap js.
-#
-# responsive : js : src - The javascript to use for the responsive
-# Bootstrap. If you're going to use responsive css, you also need to use
-# a responsive Bootstrap js.
-#
 # Here's an example configuration:
 # bootstrap:
 #   css : bootstrap.min.css
-#   responsive :
-#     enabled : true
-#     css : bootstrap-responsive.min.css
+
 #   js :
 #     enabled : true
 #     src : bootstrap.min.js
 bootstrap:
   css : bootstrap.min.css
-  responsive :
-    enabled : true
-    css : bootstrap-responsive.min.css
   js :
     enabled : true
     src : bootstrap.min.js

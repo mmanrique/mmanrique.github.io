@@ -1,15 +1,12 @@
-{% if site.bootstrap.responsive.enabled == false %}
-	{% assign navbar_bootstrap_nonresponsive_html = null %}
-	{% capture navbar_bootstrap_nonresponsive_html %}
-		<div class="navbar navbar-inverse">
-			<div class="navbar-inner">
-				<div class="container">
-					{% include body/sections/navbar/brand.html %}
-					{% include body/sections/navbar/dropdowns.html %}
-					{% include body/sections/navbar/pages.html %}
-				</div>
-			</div>
-		</div>
-	{% endcapture %}
-	{{ navbar_nonbootstrap_responsive_html | strip_newlines | remove:'	' }}
-{% endif %}
+{% assign navbar_bootstrap_responsive_html = null %}
+{% capture navbar_bootstrap_responsive_html %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+	{% include body/sections/navbar/brand.html %}
+	{% include body/sections/navbar/expand-button.html %}
+	<div class="collapse navbar-collapse" id="navbarNavDropdown">
+		{% include body/sections/navbar/dropdowns.html %}
+		{% include body/sections/navbar/pages.html %}
+	</div>
+</nav>
+{% endcapture %}
+{{ navbar_bootstrap_responsive_html | strip_newlines | remove:'	' }}
