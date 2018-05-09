@@ -54,6 +54,12 @@ css : segunda-vuelta/style.css
                     <!--<td id="per-impug-abs">0</td>-->
                 </tr>
                 <tr>
+                    <th scope="row">Blancos</th>
+                    <td id="blank" class="text-center">0</td>
+                    <td id="per-blank" class="text-center">0</td>
+                    <!--<td id="per-impug-abs">0</td>-->
+                </tr>
+                <tr>
                     <th scope="row">Total</th>
                     <td id="total" class="text-center">0</td>
                     <td id="per-total" class="text-center">0</td>
