@@ -1,0 +1,12 @@
+{% assign javascript_jquery_html = null %}
+{% capture javascript_jquery_html %}
+    {% if page.page_scripts !=null %}
+        {% for page_external_script in page.page_external_script %}
+            <script src="//{{ page_external_script }}"></script>
+        {% endfor %}
+        {% for page_script in page.page_scripts %}
+            <script src="{{ site.url }}/js/{{ page_script }}"></script>
+        {% endfor %}
+    {% endif %}
+{% endcapture %}
+{{ javascript_jquery_html | strip_newlines | remove:'	' }}

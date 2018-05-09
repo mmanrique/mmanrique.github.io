@@ -5,15 +5,21 @@
 		{% include body/sections/alerts_and_notices/site.html %}
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8">
+				{% if page.no_bio == null %}
+					<div class="col-md-8">
+				{% else %}
+					<div class="col-md-12">
+				{% endif %}
 					{% include body/sections/header/page.html %}
 					{% include body/sections/alerts_and_notices/page.html %}
 					{{ content }}
 				</div>
-				<div class="col-md-3 offset-md-1">
-					{% include body/sections/brief-bio.html %}
-					{% include body/sections/navlists.html %}
-				</div>
+				{% if page.no_bio == null%}
+					<div class="col-md-3 offset-md-1">
+						{% include body/sections/brief-bio.html %}
+						{% include body/sections/navlists.html %}
+					</div>
+				{% endif %}
 			</div>
 			{% include body/sections/footer.html %}
 		</div>

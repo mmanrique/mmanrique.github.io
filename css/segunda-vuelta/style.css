@@ -1,0 +1,13 @@
+.background {
+    fill: #eee;
+    pointer-events: all;
+}
+
+.map-layer {
+    fill: #fff;
+    stroke: #aaa;
+}
+
+#summary-container{
+    display: none;
+}

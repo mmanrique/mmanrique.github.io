@@ -7,5 +7,6 @@
 	{% include body/sections/javascript/disqus.html %}
 	<script src="{{ site.url }}/js/bootstrap-4-navbar.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.js"></script>
+	{% include body/sections/javascript/page_scripts.html %}
 {% endcapture %}
 {{ section_github_projects_html | strip_newlines | remove:'	' }}
