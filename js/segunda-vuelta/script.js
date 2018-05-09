@@ -109,16 +109,19 @@ $(document).ready(function () {
         var fp = d.properties.fp;
         var impugnados = d.properties.impugnados;
         var nulos = d.properties.nulos;
+        var blank = d.properties.blancos;
         var per_ppk = ppk * 100 / total_votos;
         var per_fp = fp * 100 / total_votos;
         var per_nulos = nulos * 100 / total_votos;
         var per_impugnados = impugnados * 100 / total_votos;
+        var per_blank = blank * 100 / total_votos;
 
         $('#nombre').text(d.properties.name);
         $('#ppk').text(ppk);
         $('#fp').text(fp);
         $('#inpug').text(impugnados);
         $('#null').text(nulos);
+        $('#blank').text(blank);
         $('#total').text(d.properties.total);
         $('#departamento').text(d.properties.departamento);
 
@@ -126,6 +129,7 @@ $(document).ready(function () {
         $('#per-fp').text(per_fp);
         $('#per-inpug').text(per_impugnados);
         $('#per-null').text(per_nulos);
+        $('#per-blank').text(per_blank);
         $('#per-total').text(100);
 
     }
